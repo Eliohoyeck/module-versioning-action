@@ -1,0 +1,28 @@
+name: Bump version
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - master
+    paths:
+      - "versioning.sh"
+      - "action.yml"
+      - "Dockerfile"
+
+jobs:
+  bump-version:
+    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: "0"
+
+      - name: version-tag
+        id: tag
+        uses: Eliohoyeck/module-versioning-action@master
+        env:
+          VERBOSE: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
