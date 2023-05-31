@@ -7,4 +7,4 @@ RUN apk --no-cache add bash git curl jq && npm install -g semver
 
 COPY versionning.sh /versionning.sh
 
-ENTRYPOINT ["/versionning.sh"]
+ENTRYPOINT ["/versioning.sh"]

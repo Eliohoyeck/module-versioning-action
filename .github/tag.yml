@@ -7,7 +7,7 @@ on:
     branches:
       - master
     paths:
-      - "entrypoint.sh"
+      - "versioning.sh"
       - "action.yml"
       - "Dockerfile"
 

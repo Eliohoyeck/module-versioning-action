@@ -1,4 +1,4 @@
-# module-versionning-action
+# module-versioning-action
 
 A Github Action to automatically bump and tag master, on merge, with the latest SemVer formatted version.
 
@@ -32,7 +32,7 @@ jobs:
         fetch-depth: '0'
 
     - name: Bump version and push tag
-      uses: Eliohoyeck/github-tag-action@master 
+      uses: Eliohoyeck/github-tag-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         WITH_V: true
@@ -96,7 +96,6 @@ If `#none` is contained in the merge commit message, it will skip bumping regard
   - Pushes tag to github
   - If triggered on your repo's default branch (`master` or `main` if unchanged), the bump version will be a release tag.
   - If triggered on any other branch, a prerelease will be generated, depending on the bump, starting with `*-<PRERELEASE_SUFFIX>.1`, `*-<PRERELEASE_SUFFIX>.2`, ...
-
 
 ## Credits
 
