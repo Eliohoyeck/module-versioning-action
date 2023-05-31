@@ -5,6 +5,6 @@ LABEL "maintainer"="Elio ELHOYECK"
 
 RUN apk --no-cache add bash git curl jq && npm install -g semver
 
-COPY versionning.sh /versionning.sh
+COPY versionning.sh /versioning.sh
 
 ENTRYPOINT ["/versioning.sh"]
