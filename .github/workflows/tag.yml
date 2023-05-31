@@ -22,7 +22,7 @@ jobs:
 
       - name: version-tag
         id: tag
-        uses: Eliohoyeck/module-versioning-action@master
+        uses: Eliohoyeck/module-versioning-action@main
         env:
           VERBOSE: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
