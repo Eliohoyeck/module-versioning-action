@@ -1,4 +1,4 @@
-name: 'Github Tag Bump'
+name: 'Github Module Versioning'
 description: 'Bump and push git tag on merge'
 author: 'Elio ELHOYECK'
 runs:
