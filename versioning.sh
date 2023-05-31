@@ -1,5 +1,5 @@
 #!/bin/bash
-# test github action
+
 
 set -o pipefail
 
@@ -61,7 +61,7 @@ for dir in $modules_path; do
     echo "This is the detected module:$splitDir"
     module_prefix=$(echo $dir | cut -d "/" -f $(($field_num - 1)))
     tag_prefix=$module_prefix-$splitDir-
-
+    
     # verbose, show everything
     if $verbose
     then
@@ -326,7 +326,7 @@ EOF
     setOutput "outputdate" "$format_date"
 
     git_ref_posted=$( echo "${git_refs_response}" | jq .ref | tr -d '"' )
-
+    
     # show markdown outputs
     echo $new
     echo $commit
