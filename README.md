@@ -35,7 +35,10 @@ jobs:
       uses: Eliohoyeck/github-tag-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        WITH_V: true
+        MODULES_PATH: 'terraform/modules/*/**'  # set the path of the module you want to get cheked
+        MAJOR_STRING_TOKEN: 'major'  # using major in the PR commit will trigger a major change
+        MINOR_STRING_TOKEN: 'minor'  # using minor in the PR commit will trigger a major change
+        PATCH_STRING_TOKEN: 'patch'  # using patch in the PR commit will trigger a major change     
 ```
 
 Is recommended to use on `pull_request` instead of on commit to master/main.
